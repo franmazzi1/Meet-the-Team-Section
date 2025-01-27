@@ -82,10 +82,45 @@ body {
     line-height: 1.6;
 }
 .memb-info p{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.memb-link{
+    padding: 20px;
+    text-align: center;
     
+}
+.memb-link a{
+    text-decoration: none;
+    color: #394150;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.memb-link a img{
+    width: 15px;
 }
 
 
+.memb:nth-child(2) {
+    background-color: #C1B6F8;
+}
+
+.memb:nth-child(3) {
+    background-color: #EDACD2; /* Rosa claro */
+}
+
+.memb:nth-child(5) {
+    background-color: #9DC4F8; /* Celeste */
+}
+
+.memb:nth-child(6) {
+    background-color: #F8D8B0; /* Naranja claro */
+}
+
+.memb:nth-child(7) {
+    background-color: #9DC4F8; /* Verde claro */
+}
 
 
 
