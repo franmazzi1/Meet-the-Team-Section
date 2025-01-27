@@ -112,12 +112,10 @@ html, body {
     background-color: #C1B6F8;
     order: 2;
 }
-
 .memb:nth-child(3) {
     background-color: #EDACD2; /* Rosa claro */
     order: 3;
 }
-
 .memb:nth-child(4){
     order: 4;
 }
@@ -125,16 +123,15 @@ html, body {
     background-color: #9DC4F8; /* Celeste */
     order: 5;
 }
-
 .memb:nth-child(6) {
     background-color: #F8D8B0; /* Naranja claro */
     order: 6;
 }
-
 .memb:nth-child(7) {
     background-color: #9DC4F8; /* Verde claro */
     order: 7;
 }
+
 
 @media (min-width:640px) and (max-width: 1024px) {
     .container{
@@ -157,7 +154,6 @@ html, body {
     .memb:nth-child(4){
         order: 10;
     }
-    
 }
 
 
