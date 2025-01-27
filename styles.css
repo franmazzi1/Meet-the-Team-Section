@@ -4,10 +4,17 @@
     box-sizing: border-box;
     font-family: 'Outfit';
 }
-
 body {
+    margin: 0;
+    padding: 0;
     height: 100vh;
+    overflow-x: hidden;
 }
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* Evita scroll horizontal */
+}
+
 
 .container{
     display: grid;
@@ -16,12 +23,12 @@ body {
     gap: 0;
     width: 90%;
     max-width: 1200px;
-    margin: 75px auto;
+    margin: 50px auto;
     background-color: #F3F4F6;
     background-image: url(resources/Background_decor@2x.png);
     background-repeat: no-repeat; 
     background-position: top left;
-    background-size: 400px; 
+    background-size: 250px; 
     border-radius: 16px;
     overflow: hidden;
 }
@@ -31,7 +38,6 @@ body {
     padding: 30px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 .header span{
     font-size: 1rem;
@@ -54,7 +60,7 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    height: 350px;
+    height: 300px;
     overflow: hidden;
     
 
@@ -104,22 +110,54 @@ body {
 
 .memb:nth-child(2) {
     background-color: #C1B6F8;
+    order: 2;
 }
 
 .memb:nth-child(3) {
     background-color: #EDACD2; /* Rosa claro */
+    order: 3;
 }
 
+.memb:nth-child(4){
+    order: 4;
+}
 .memb:nth-child(5) {
     background-color: #9DC4F8; /* Celeste */
+    order: 5;
 }
 
 .memb:nth-child(6) {
     background-color: #F8D8B0; /* Naranja claro */
+    order: 6;
 }
 
 .memb:nth-child(7) {
     background-color: #9DC4F8; /* Verde claro */
+    order: 7;
+}
+
+@media (min-width:640px) and (max-width: 1024px) {
+    .container{
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: auto;
+    }
+    .header{
+        grid-column: span 3;
+    }
+    .memb:nth-child(4){
+        order: 6;
+    }
+}
+
+@media (max-width: 640px){
+    .container{
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: auto;
+    }
+    .memb:nth-child(4){
+        order: 10;
+    }
+    
 }
 
 
@@ -130,7 +168,6 @@ body {
     background-color: #adadad;
     font-size: 14px;
     text-align: center;
-    margin-top: 16px;
     color: rgb(55, 65, 81);
     position: fixed; 
     bottom: 0px;       
@@ -139,5 +176,6 @@ body {
 }
 
 .author-info a {
-    text-decoration: none;
+    color: rgb(55, 65, 81);
+    text-decoration: underline;
 }
